@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-29 04:52:19 "/>
+        <attribute name="created" value="am9hby5wZWRybztERVNLVE9QLU5IUjg5TlQ7MjAyNC0wMS0yOTsiMDQ6MzY6NTMgIjszMjk1"/>
+        <attribute name="edited" value="am9hby5wZWRybztERVNLVE9QLU5IUjg5TlQ7MjAyNC0wMS0yOTsiMDQ6NTI6MTkgIjsxOzM0MDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ano" type="Integer" array="False" size=""/>
+            <declare name="msg" type="String" array="False" size=""/>
+            <input variable="ano"/>
+            <if expression="ano % 4=0">
+                <then>
+                    <if expression="ano % 100 == 0">
+                        <then>
+                            <if expression="ano % 400 = 0">
+                                <then>
+                                    <assign variable="msg" expression="&quot;esse ano &#233; bissexto&quot;"/>
+                                    <output expression="msg" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="msg" expression="&quot;esse ano n&#227;o &#233; bissexto&quot;"/>
+                                    <output expression="msg" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="msg" expression="&quot;esse ano &#233; bissexto&quot;"/>
+                            <output expression="msg" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="msg" expression="&quot;esse ano n&#227;o &#233; bissexto&quot;"/>
+                    <output expression="msg" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

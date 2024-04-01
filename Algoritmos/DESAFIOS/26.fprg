@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-06 08:58:51 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDY7IjA4OjUwOjMwICI7MjQ2NA=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDY7IjA4OjU0OjE4ICI7MTtqb2FvLnBlZHJvO05UMjc7MjAyNC0wMy0wNjsiMDg6MjY6MTAgIjsyNS5mcHJnOzU3NDU="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDY7IjA4OjU4OjUxICI7MTsyNTgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a == b &amp;&amp; b == c">
+                <then>
+                    <output expression="&quot;Esse tri&#226;ngulo &#233; equil&#225;tero&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="a = b || a = c || b = c">
+                        <then>
+                            <output expression="&quot;Esse tri&#226;ngulo &#233; is&#243;celes&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a&lt;b+c &amp;&amp; b&lt;a+c &amp;&amp; c&lt;a+b">
+                                <then>
+                                    <output expression="&quot;Esse tri&#226;ngulo &#233; ret&#226;ngulo&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Isso n&#227;o pode ser um tri&#226;ngulo&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-04 10:08:39 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjA5OjE5OjEyICI7MjQ2OA=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjEwOjA4OjM5ICI7MTsyNTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sm, k, kc, kcp, d" type="Real" array="False" size=""/>
+            <input variable="sm"/>
+            <input variable="kc"/>
+            <assign variable="k" expression="(sm/7)/100"/>
+            <assign variable="kcp" expression="kc*k"/>
+            <assign variable="d" expression="kcp*0.9"/>
+            <output expression="&quot;O valor de cada KW &#233;&quot;&amp;&quot; &quot;&amp; k" newline="True"/>
+            <output expression="&quot;O valor a ser pago &#233; de&quot;&amp;&quot; &quot;&amp; kcp" newline="True"/>
+            <output expression="&quot;O novo valor com desconto &#233; de&quot;&amp;&quot; &quot;&amp; d" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

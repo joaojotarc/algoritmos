@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="maria.schenfeldt"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-19 04:28:07 "/>
+        <attribute name="created" value="bWFyaWEuc2NoZW5mZWxkdDtOVDE2OzIwMjQtMDItMTk7IjAxOjM0OjE5ICI7MzA4Mg=="/>
+        <attribute name="edited" value="bWFyaWEuc2NoZW5mZWxkdDtOVDE2OzIwMjQtMDItMTk7IjA0OjEwOjM1ICI7MjszMTg2"/>
+        <attribute name="edited" value="cmFmYWVsLnRyaWxoYTtOVDE0OzIwMjQtMDItMTk7IjA0OjI2OjU3ICI7MjtyYWZhZWwudHJpbGhhO05UMTQ7MjAyNC0wMi0xNDsiMDE6MzQ6NTggIjtFeDAyNi5mcHJnOzY1Nzk="/>
+        <attribute name="edited" value="cmFmYWVsLnRyaWxoYTtOVDE0OzIwMjQtMDItMTk7IjA0OjI4OjA3ICI7MzsyODc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="arq, reg" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="arq" expression="&quot;teste2.txt&quot;"/>
+            <open expression="arq" mode="write"/>
+            <assign variable="reg" expression="&quot;id,nome,salario,diastrab,inss,bcir,ir,vt,vr,salliq&quot;"/>
+            <write expression="reg"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="aNome[i]"/>
+                <input variable="aSalario[i]"/>
+                <input variable="aDiastrab[i]"/>
+                <assign variable="aSalario[i]" expression="arred((aSalario[i]/30)*aDiastrab[i])"/>
+                <assign variable="ainss[i]" expression="inss(asalario[i])"/>
+                <assign variable="abcir[i]" expression="asalario[i]-ainss[i]"/>
+                <assign variable="air[i]" expression="ir(abcir[i])"/>
+                <assign variable="avt[i]" expression="arred(0.06*asalario[i])"/>
+                <assign variable="avr[i]" expression="arred(0.01*asalario[i])"/>
+                <assign variable="asalliq[i]" expression="asalario[i]-ainss[i]-air[i]-avt[i]-avr[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="anome[i] &amp; &#13;&#10;&quot; | Salario = R$&quot;&amp;aSalario[i]" newline="True"/>
+                <output expression="&quot;INSS = R$&quot; &amp; ainss[i]" newline="True"/>
+                <output expression="&quot;IR = R$&quot;&amp; air[i]" newline="True"/>
+                <output expression="&quot;VT = R$&quot;&amp; avt[i]" newline="True"/>
+                <output expression="&quot;VR = R$&quot;&amp; avr[i]" newline="True"/>
+                <output expression="&quot;Salario Liq = R$&quot; &amp; asalliq[i]" newline="True"/>
+            </for>
+            <close mode="write"/>
+        </body>
+    </function>
+</flowgorithm>

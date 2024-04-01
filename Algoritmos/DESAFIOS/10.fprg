@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-04 01:38:31 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjAxOjMyOjM1ICI7MjQ2MA=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjAxOjM4OjMxICI7MjsyNTcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="b, a, at" type="Integer" array="False" size=""/>
+            <input variable="b"/>
+            <input variable="a"/>
+            <assign variable="at" expression="(b*a)/2"/>
+            <output expression="&quot;A &#225;rea do tri&#226;ngulo &#233;&quot;&amp;&quot; &quot;&amp; at" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-07 03:54:13 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDItMDU7IjA0OjM3OjE2ICI7MjQ2Nw=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDItMDc7IjAzOjU0OjEzICI7MjsyNTcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dia, mes, ano, ano1, q, resto, cogano, cogmes, cogdia" type="Integer" array="False" size=""/>
+            <declare name="bissexto" type="Boolean" array="False" size=""/>
+            <declare name="diasem" type="String" array="False" size=""/>
+            <input variable="dia"/>
+            <input variable="mes"/>
+            <input variable="ano"/>
+            <assign variable="bissexto" expression="(ano%4==0 &amp;&amp; ano%100!=0)||ano%400==0"/>
+            <assign variable="ano1" expression="ano % 100"/>
+            <assign variable="cogano" expression="(ano1/4+ano1%7)%7"/>
+            <assign variable="q" expression="ano1/4"/>
+            <assign variable="resto" expression="ano1 % 7"/>
+            <assign variable="cogano" expression="(q+resto) % 7"/>
+            <if expression="ano&gt;2000">
+                <then>
+                    <assign variable="cogano" expression="cogano-1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cogano&lt;0">
+                <then>
+                    <assign variable="cogano" expression="cogano+7"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="bissexto &amp;&amp;(mes==1 || mes==2)">
+                <then>
+                    <assign variable="cogano" expression="cogano-1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="mes==1 || mes==10">
+                <then>
+                    <assign variable="cogmes" expression="1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="mes==2 || mes==3 || mes==11">
+                <then>
+                    <assign variable="cogmes" expression="4"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="mes== 4 || mes==7">
+                <then>
+                    <assign variable="cogmes" expression="0"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="mes==5">
+                <then>
+                    <assign variable="cogmes" expression="5"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="mes==6">
+                <then>
+                    <assign variable="cogmes" expression="5"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="mes==8">
+                <then>
+                    <assign variable="cogmes" expression="3"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="mes==9 || mes==12">
+                <then>
+                    <assign variable="cogmes" expression="6"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="cogdia" expression="(dia+cogmes+cogano)%7"/>
+            <if expression="cogdia==0">
+                <then>
+                    <assign variable="diasem" expression="&quot;s&#225;bado&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cogdia==1">
+                <then>
+                    <assign variable="diasem" expression="&quot;domingo&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cogdia==2">
+                <then>
+                    <assign variable="diasem" expression="&quot;segunda-feira&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cogdia==3">
+                <then>
+                    <assign variable="diasem" expression="&quot;ter&#231;a-feira&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cogdia==4">
+                <then>
+                    <assign variable="diasem" expression="&quot;quarta-feira&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cogdia==5">
+                <then>
+                    <assign variable="diasem" expression="&quot;quinta-feira&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="cogdia==6">
+                <then>
+                    <assign variable="diasem" expression="&quot;sexta-feira&quot;"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;O dia da semana do dia &quot;&amp;dia&amp;&quot;/&quot;&amp;mes&amp;&quot;/&quot;&amp;ano&amp;&quot; &#233; &quot;&amp;diasem" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

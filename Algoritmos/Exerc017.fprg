@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-31 02:44:38 "/>
+        <attribute name="created" value="am9hby5wZWRybztERVNLVE9QLU5IUjg5TlQ7MjAyNC0wMS0zMTsiMDI6MjE6MjggIjszMjgy"/>
+        <attribute name="edited" value="am9hby5wZWRybztERVNLVE9QLU5IUjg5TlQ7MjAyNC0wMS0zMTsiMDI6NDQ6MzggIjsxOzMzOTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <for variable="a" start="2" end="9" direction="inc" step="1">
+                <output expression="&quot;tabuada do &quot; &amp; a" newline="True"/>
+                <for variable="b" start="1" end="10" direction="inc" step="1">
+                    <assign variable="c" expression="a*b"/>
+                    <output expression="a &amp; &quot;x&quot; &amp; b &amp; &quot;=&quot; &amp; c" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

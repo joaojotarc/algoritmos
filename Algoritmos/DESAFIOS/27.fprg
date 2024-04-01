@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-06 10:22:06 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDY7IjA5OjUyOjA5ICI7MjQ3Mw=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDY7IjEwOjE0OjQ1ICI7MTtqb2FvLnBlZHJvO05UMjc7MjAyNC0wMy0wNjsiMDg6NTA6MzAgIjsyNi5mcHJnOzU3MzQ="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDY7IjEwOjIyOjA2ICI7MTsyNTY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a&lt;b+c &amp;&amp; b&lt;a+c &amp;&amp; c&lt;a+b">
+                <then>
+                    <if expression="((a^2)+(b^2))=c^2 || ((b^2)+(c^2))=a^2 || ((a^2)+(c^2))= b^2">
+                        <then>
+                            <output expression="&quot;Tri&#226;ngulo Ret&#226;ngulo&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="((a^2)+(b^2))&lt; c^2 || ((b^2)+(c^2)) &lt; a^2 || ((a^2)+(c^2))&lt; b^2">
+                                <then>
+                                    <output expression="&quot;Tri&#226;ngulo Acutangulo&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Tri&#226;ngulo Obtusangulo&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Isso n&#227;o pode ser um tri&#226;ngulo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

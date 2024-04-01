@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-05 05:11:01 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDItMDU7IjA0OjM3OjE2ICI7MjQ2Nw=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDItMDU7IjA1OjExOjAxICI7MTsyNTYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dia, mes, ano, ano1, q, resto, cogano" type="Integer" array="False" size=""/>
+            <input variable="dia"/>
+            <input variable="mes"/>
+            <input variable="ano"/>
+            <assign variable="ano1" expression="ano/10"/>
+            <assign variable="ano1" expression="ano % 100"/>
+            <assign variable="q" expression="ano1/4"/>
+            <assign variable="resto" expression="ano1 % 7"/>
+            <assign variable="cogano" expression="(q+resto) % 7"/>
+            <if expression="ano1&gt;2000">
+                <then>
+                    <assign variable="cogano" expression="cogano-1"/>
+                    <if expression="cogano&lt;0">
+                        <then>
+                            <assign variable="cogano" expression="cogano+7"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <output expression="ano1" newline="True"/>
+            <output expression="cogano" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-07 05:10:51 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDItMDc7IjAzOjU0OjE0ICI7MjQ2NQ=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDItMDc7IjA1OjEwOjUxICI7MTsyNTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="salario, dias, ir, vt, vr, inss, final" type="Real" array="False" size=""/>
+            <input variable="salario"/>
+            <input variable="dias"/>
+            <assign variable="salario" expression="(salario/30)*dias"/>
+            <if expression="salario &lt;= 1412">
+                <then>
+                    <assign variable="inss" expression="salario - salario*0.075"/>
+                </then>
+                <else>
+                    <if expression="salario &lt;= 2668.68">
+                        <then>
+                            <assign variable="inss" expression="salario - (salario*0.09)-21.18"/>
+                        </then>
+                        <else>
+                            <if expression="salario &lt;= 4000.03">
+                                <then>
+                                    <assign variable="inss" expression="salario - (salario*0.12)- 101.18"/>
+                                </then>
+                                <else>
+                                    <if expression="salario &lt;= 7786.02">
+                                        <then>
+                                            <assign variable="inss" expression="salario -(salario*0.14)-181.18"/>
+                                        </then>
+                                        <else>
+                                            <if expression="salario &gt; 7786.02">
+                                                <then>
+                                                    <assign variable="inss" expression="salario-908.86"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Seu desconto do inss foi de &quot; &amp; &quot; &quot; &amp; salario - inss" newline="True"/>
+            <if expression="inss &lt;= 2112">
+                <then>
+                    <assign variable="ir" expression="inss"/>
+                </then>
+                <else>
+                    <if expression="inss &lt;= 2826.65">
+                        <then>
+                            <assign variable="ir" expression="inss- (inss*0.075)-158.40"/>
+                        </then>
+                        <else>
+                            <if expression="inss &lt;= 3751.06">
+                                <then>
+                                    <assign variable="ir" expression="inss - (inss*0.15)-370.40"/>
+                                </then>
+                                <else>
+                                    <if expression="inss &lt;= 4664.68">
+                                        <then>
+                                            <assign variable="ir" expression="inss - (inss*0.225)-651.73"/>
+                                        </then>
+                                        <else>
+                                            <if expression="inss &gt; 4664.68">
+                                                <then>
+                                                    <assign variable="ir" expression="inss - (salario*0.275)-884.96"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Seu desconto do ir foi de &quot; &amp; &quot; &quot; &amp; inss - ir" newline="True"/>
+            <assign variable="vt" expression="salario*0.06"/>
+            <output expression="&quot;Seu desconto de vale transporte foi de &quot; &amp; &quot; &quot; &amp; vt" newline="True"/>
+            <assign variable="vr" expression="salario*0.01"/>
+            <output expression="&quot;Seu desconto de vale refei&#231;&#227;o foi de &quot; &amp; &quot; &quot; &amp; vr" newline="True"/>
+            <output expression="&quot;Seu sal&#225;rio final &#233; &quot; &amp; vt+vr+inss+ir - (salario)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

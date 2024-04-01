@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-29 04:12:08 "/>
+        <attribute name="created" value="am9hby5wZWRybztERVNLVE9QLU5IUjg5TlQ7MjAyNC0wMS0yOTsiMDI6NTE6NDAgIjszMjg2"/>
+        <attribute name="edited" value="am9hby5wZWRybztERVNLVE9QLU5IUjg5TlQ7MjAyNC0wMS0yOTsiMDQ6MTI6MDggIjsyOzMzOTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura, peso, IMC" type="Real" array="False" size=""/>
+            <declare name="m1, m2, m3, m4, m5" type="String" array="False" size=""/>
+            <assign variable="m1" expression="&quot;ABAIXO DO PESO&quot;"/>
+            <assign variable="m2" expression="&quot;PESO NORMAL&quot;"/>
+            <assign variable="m3" expression="&quot;EXCESSO DE PESO&quot;"/>
+            <assign variable="m4" expression="&quot;OBESIDADE&quot;"/>
+            <assign variable="m5" expression="&quot;OBESIDADE EXTREMA&quot;"/>
+            <input variable="altura"/>
+            <input variable="peso"/>
+            <assign variable="IMC" expression="peso/(altura^2)"/>
+            <output expression="IMC" newline="True"/>
+            <if expression="IMC &gt;18.5">
+                <then>
+                    <if expression="IMC &gt; 24.9">
+                        <then>
+                            <if expression="IMC &gt; 30">
+                                <then>
+                                    <if expression="IMC &gt; 35">
+                                        <then>
+                                            <output expression="m5" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="m4" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="m3" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="m2" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="m1" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gabriel.gregorio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-04 04:24:54 "/>
+        <attribute name="created" value="RWxvw6FoLk5lZ3Jpbmk7TlQ0MTsyMDI0LTAzLTA0OyIwMzo1NzowNCAiOzI4MzE="/>
+        <attribute name="edited" value="RWxvw6FoLk5lZ3Jpbmk7TlQ0MTsyMDI0LTAzLTA0OyIwNDoxMjoxNiAiOzE7MjkzNA=="/>
+        <attribute name="edited" value="Z2FicmllbC5ncmVnb3JpbztOVDIwOzIwMjQtMDMtMDQ7IjA0OjI0OjU0ICI7MTszMTkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NUMERO, SUC" type="Integer" array="False" size=""/>
+            <input variable="NUMERO"/>
+            <if expression="NUMERO&gt;=0 &amp;&amp; NUMERO&lt;=60">
+                <then>
+                    <assign variable="NUMERO" expression="(NUMERO+1)"/>
+                    <assign variable="NUMERO" expression="NUMERO%61"/>
+                    <output expression="NUMERO" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O NUMERO N&#195;O PODE SER ADD&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

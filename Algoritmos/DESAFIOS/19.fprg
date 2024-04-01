@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gabriel.gregorio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-04 04:24:33 "/>
+        <attribute name="created" value="RWxvw6FoLk5lZ3Jpbmk7TlQ0MTsyMDI0LTAzLTA0OyIwMjo0NTo1NiAiOzI4MzQ="/>
+        <attribute name="edited" value="RWxvw6FoLk5lZ3Jpbmk7TlQ0MTsyMDI0LTAzLTA0OyIwMjo1NzozNyAiOzE7R2FicmllbC5Mb3BlcztOVDM1OzIwMjQtMDMtMDQ7IjAyOjQzOjQ4ICI7ZGVzYWZpbzAxOS5mcHJnOzcxMzY="/>
+        <attribute name="edited" value="RWxvw6FoLk5lZ3Jpbmk7TlQ0MTsyMDI0LTAzLTA0OyIwMjo1Nzo0NCAiOzE7Mjk0Mg=="/>
+        <attribute name="edited" value="Z2FicmllbC5ncmVnb3JpbztOVDIwOzIwMjQtMDMtMDQ7IjA0OjI0OjMzICI7MTszMTg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="horas, minutA, minutM" type="Integer" array="False" size=""/>
+            <input variable="horas"/>
+            <input variable="minutA"/>
+            <assign variable="minutM" expression="(horas*60)+minutA"/>
+            <output expression="minutM" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-04 08:34:30 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjA4OjI0OjE5ICI7MjQ3MA=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjA4OjM0OjMwICI7MTsyNTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dia, mes, ano" type="Integer" array="False" size=""/>
+            <input variable="ano"/>
+            <input variable="mes"/>
+            <input variable="dia"/>
+            <output expression="dia&amp;&quot;/&quot;&amp;mes&amp;&quot;/&quot;&amp;ano" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

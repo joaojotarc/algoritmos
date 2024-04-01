@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joao.pedro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-04 01:41:27 "/>
+        <attribute name="created" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjAxOjM4OjQ0ICI7MjQ2Ng=="/>
+        <attribute name="edited" value="am9hby5wZWRybztOVDI3OzIwMjQtMDMtMDQ7IjAxOjQxOjI3ICI7MTsyNTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="co, ca, hip" type="Integer" array="False" size=""/>
+            <input variable="co"/>
+            <input variable="ca"/>
+            <assign variable="hip" expression="((co^2)+(ca^2))^0.5"/>
+            <output expression="&quot;A hipotenusa vale&quot;&amp;&quot; &quot;&amp; hip" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
